@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    @import url(https://fonts.googleeapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap);
+
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: "Poppins",sans-serif;
+}
+body{
+  height: 100vh;
+  background: url("background2.jpeg");
+  background-repeat:0;
+  background-size: cover;
+  padding:20px 2%;
+}
+
+.container{
+  position: relative;
+  height: 100%;
+  background-color: rgba(255, 255, 255, .1);
+  border: 1px solid rgba(255, 255, 255, .2);
+  backdrop-filter: blur(15px);
+  border-radius: 30px;
+  box-shadow:#fff;
+  transform: scale(0);
+  animation: appear 2s ease forwards;
+  /* overflow: hidden; */
+}
+
+
+@keyframes appear{
+  100%{
+    transform: scale(1);
+  }
+}
+
+header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px 5%;
+  display: flex;
+  border-bottom: 2px solid rgba(255, 255, 255, .2);
+  box-shadow: 10px #fff;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+.animted {
+  transform: translateX(50px);
+  opacity: 0;
+  animation: slide-in 3s ease forwards;
+  animation-delay: 2.5s;
+}
+@keyframes slide-in {
+  100% {
+    transform: translateX(0);
+    opacity: 10;
+  }
+}
+.logo{
+  font-size: 25px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.navbar a{
+  font-size:18px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  border-bottom:2px solid transparent;
+  transition: .5s;
+}
+
+.navbar a:hover,
+.navbar a.active{
+  border-color: #fff;
+}
+.home,.home-second{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 50px;
+  padding: 50px 5% 0;
+  color: #fff;
+}
+
+.home-detail h1{
+  font-size: 55px;
+  line-height: 1;
+}
+
+.home-detail h2{
+  fofont-size:32px;
+}
+
+.home-detail p{
+  margin:10px 0 20px; 
+}
+
+.home-detail .download-social{
+  display: flex;
+  align-items: center;
+}
+
+.btn{
+  display: inline-block;
+  padding: 10px 30px;
+  background: #fff;
+  border: 2px solid #fff;
+  border-radius: 40px;
+  box-shadow: 0 0 10px #fff;
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  transition: .5s;
+}
+
+.btn:hover{
+  background: transparent;
+  box-shadow: none;
+  color: #fff;
+}
+
+.home-detail .social-icons{
+  margin-left: 20px;
+}
+
+.home-detail .social-icons a{
+  display: inline-flex;
+  padding: 8px;
+  border: 2px solid #fff;
+  border-radius:50%; 
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  margin: 0 8px;
+  transition: .5s;
+}
+
+.home-detail .social-icons a:hover{
+  background: #fff;
+  box-shadow: 0 0 10px #fff;
+  color: #333;
+}
+
+.home-image{
+  display: flex;
+  position: absolute;
+  top: 140px;
+  left: 720px;
+  bottom: 80px;
+  right: 60px;
+  width: 230px;
+  height: 230px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background-color: white;
+  overflow: hidden;
+}
+.image-gap img{
+  position: absolute;
+  top: 0px;
+  bottom: 540px;
+  right:30px;
+  right: 0px;
+  width: 220px;
+  height: 220px;
+}
+
+/* .home-image .image-gap img:hover{
+  width: 240px;
+  height: 240px;
+} */
+.image-gap{
+  
+}
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header class="animted">
+      <a href="./index.html"class="logo">Portfolio</a>
+        <nav class="navbar">
+          <<a href="#" class="Wwrks-link">Works</a>
+          <a href="#" class="service-link">Service</a>
+          <a href="#" class="contact-link">Contact</a>
+        </nav>
+    </header>
+    <section class="home animted">
+      <div class="home-detail">
+          <h1>Adnan</h1>
+          <h2>Frontend Developer</h2>
+        <p>I am a frontend Developer. I Learnt Frontend from Brototype.</p>
+          <div class="download-social">
+            <a class="btn" href="#">Download CV</a>
+            <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="home-image">
+        <div class="image-gap">
+          <img src="../my-image.jpg" alt="image">
+        </div>
+      </div>
+    </section>
+    <section class="about"id="about">
+      <h1>hello i am adnanadnan adnan </h1>
+    </section>
+  </div>
+</body>
+</html>
